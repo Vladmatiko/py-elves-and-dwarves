@@ -1,8 +1,8 @@
 from app.players.player import Player
-from abc import abstractmethod
+from abc import abstractmethod, ABC
 
 
-class Dwarf(Player):
+class Dwarf(Player, ABC):
     @abstractmethod
     def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
